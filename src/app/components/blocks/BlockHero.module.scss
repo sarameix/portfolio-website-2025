@@ -1,0 +1,49 @@
+@import '../../styles/modules/all';
+
+.hero {
+    width: 100%;
+    position: relative;
+
+    article {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        color: $cream;
+
+        h1 {
+            font-size: 60px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+    }
+
+    .heroImage {
+        width: 100%;
+        height: 420px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all ease 0.75s;
+
+        @include breakpoint(sm) {
+            height: 600px;
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

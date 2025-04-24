@@ -1,21 +1,22 @@
-import Link from 'next/link';
+import NavBar from './components/NavBar';
+import BlockHero from './components/blocks/BlockHero';
+import BlockWork from './components/blocks/BlockWork';
+import BlockAbout from './components/blocks/BlockAbout';
+import BlockContact from './components/blocks/BlockContact';
+import Footer from './components/Footer';
 import styles from './page.module.scss';
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <section className={`${styles.section} ${styles.hero}`}>
-          <div className={styles.heroImage}>
-            <img src={'./images/cover-photo.jpg'} alt={'Sara Meixner Cover Photo'} />
-            <div className={styles.overlay} />
-          </div>
-          <h1>Sara Meixner | Web Developer</h1>
-        </section>
+        <NavBar />
+        <BlockHero />
+        <BlockWork />
+        <BlockAbout />
+        <BlockContact />
       </main>
-      <footer className={styles.footer}>
-        <Link href='https://github.com/sarameix'>GitHub</Link>
-      </footer>
+      <Footer />
     </div>
   );
 }
